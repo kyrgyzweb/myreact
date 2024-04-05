@@ -1,16 +1,16 @@
-import logo from './logo.svg';
 import './App.css';
-import Greeting from './Greetings';
-import Example from './r/Example1';
-import Talker from './r/Talker';
+import { comments } from './r1/commentData';
+import Card from './r1/Card';
 
 function App() {
+  
   return (
     <div>
-      <h1>Bismillah</h1>
-      <Greeting name="Abdullah" signedIn={true}/>
-      <Example />
-      <Talker />
+      {
+        comments.map(comment => 
+          <Card commentObject={comment} />
+          )
+      }
     </div>
     
   );
